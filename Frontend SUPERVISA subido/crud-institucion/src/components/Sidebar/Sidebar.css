@@ -1,0 +1,42 @@
+/* --- Barra lateral (Sidebar) --- */
+.sidebar {
+    width: 220px;
+    background-color: #5b2c6f; /* Mismo color de fondo que el header */
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para separarla del contenido */
+    height: calc(100vh - 60px); /* Ajusta la altura para que no se solape con el header fijo */
+    position: fixed; /* Fija la barra lateral */
+    top: 60px; /* Empieza justo debajo del header */
+    left: 0;
+    overflow-y: auto; /* Permite scroll si el contenido de la barra es muy largo */
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Elimina márgenes por defecto */
+}
+
+.sidebar nav ul li {
+    padding: 12px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    margin-bottom: 8px; /* Espacio entre elementos del menú */
+    transition: background-color 0.3s ease;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.sidebar nav ul li:hover,
+.sidebar nav ul li.active {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo semitransparente al pasar el ratón o si está activo */
+}
+
+.sidebar nav ul li .MuiListItemIcon-root { /* Estilos para los íconos de Material UI */
+    color: white; /* Íconos en blanco */
+    min-width: 30px; /* Reduce el espacio por defecto de los íconos */
+}

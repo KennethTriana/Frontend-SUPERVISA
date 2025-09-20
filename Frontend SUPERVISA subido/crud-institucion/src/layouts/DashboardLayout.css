@@ -1,0 +1,25 @@
+/* Contenedor principal para toda la aplicación */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* --- Contenedor que envuelve el sidebar y el contenido principal --- */
+.dashboard-content-wrapper {
+    display: flex;
+    flex: 1;
+    /* ✅ Añade un padding superior para dejar espacio para el header fijo */
+    padding-top: 60px;
+}
+
+/* --- Estilos para el contenido principal (donde se renderiza cada página) --- */
+.main-content {
+    flex-grow: 1;
+    padding: 25px;
+    background-color: #f9f9f9;
+    overflow-y: auto;
+    /* ✅ Añade un margen izquierdo para dejar espacio para el sidebar fijo */
+    margin-left: 220px;
+}
